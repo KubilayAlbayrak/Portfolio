@@ -4,8 +4,6 @@ import {
   MainScreen,
   BlogScreen,
   SkillsScreen,
-  WorkScreen,
-  ContactScreen,
   AboutMeScreen,
 } from '../screens';
 
