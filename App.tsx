@@ -1,21 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, useWindowDimensions } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import MainStackScreen from './src/navigation/Main';
+import {
+  MainScreen,
+  AboutMeScreen,
+  ContactScreen,
+  SkillsScreen,
+  WorkScreen,
+  BlogScreen,
+} from './src/screens';
+import { COLOR } from './globalStyles';
 
 export default function App() {
+  const linking = {
+    prefixes: ['https://localhost:19006'],
+    config: {
+      screens: {
+        Root: {
+          path: '/',
+          initialRouteName: '/',
+          screens: {
+            MainScreen: '/',
+            AboutMeScreen: '/About',
+            SkillsScreen: '/Skills',
+            BlogScreen: '/Blog',
+          },
+        },
+      },
+    },
+  };
+  const { height, width, scale } = useWindowDimensions();
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{ height: height, width: width }}>
+      <NavigationContainer linking={linking} fallback={<Text>Loading...</Text>}>
+        <MainStackScreen />
+      </NavigationContainer>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
