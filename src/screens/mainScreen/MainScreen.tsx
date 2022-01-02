@@ -39,13 +39,13 @@ const MainScreen = ({ navigation }) => {
           style={{
             flex: 90.5,
             backgroundColor: COLOR.mainBackground,
-            marginTop: height >= 670 ? hp(10) : hp(0),
+            marginTop: height >= 670 ? hp(10) : hp(15),
           }}
         >
           <View style={{ backgroundColor: COLOR.mainBackground }}>
             <View
               style={{
-                marginTop: width >= 1045 ? hp(20) : hp(0),
+                marginTop: width >= 1045 ? hp(20) : hp(15),
                 marginLeft: wp(5),
               }}
             >
@@ -54,11 +54,16 @@ const MainScreen = ({ navigation }) => {
               </TypeWriter>
             </View>
           </View>
-          <View style={{ backgroundColor: COLOR.mainBackground }}>
+          <View
+            style={{
+              backgroundColor: COLOR.mainBackground,
+            }}
+          >
             <View
               style={{
-                marginTop: height >= 1045 || height > 670 ? hp(5) : hp(0),
+                marginTop: height >= 1045 || height > 670 ? hp(5) : hp(5),
                 marginLeft: wp(5),
+                marginBottom: height >= 1045 || height > 670 ? hp(0) : hp(5),
                 justifyContent: 'center',
               }}
             >
