@@ -39,13 +39,13 @@ const MainScreen = ({ navigation }) => {
           style={{
             flex: 90.5,
             backgroundColor: COLOR.mainBackground,
-            marginTop: height >= 670 ? hp(10) : hp(15),
+            marginTop: height >= 670 ? hp(10) : hp(5),
           }}
         >
           <View style={{ backgroundColor: COLOR.mainBackground }}>
             <View
               style={{
-                marginTop: width >= 1045 ? hp(20) : hp(15),
+                marginTop: width >= 1045 ? hp(20) : hp(5),
                 marginLeft: wp(5),
               }}
             >
