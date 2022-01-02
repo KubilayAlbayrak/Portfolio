@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, useWindowDimensions, Linking } from 'react-native';
+import {
+  View,
+  Text,
+  useWindowDimensions,
+  Linking,
+  Dimensions,
+} from 'react-native';
 import SideBar from '../../components/Sidebar/SideBar';
 import ToggleHeader from '../../components/ToggleHeader/ToggleHeader';
 import { ToggleHeaderContent } from '../../components';
@@ -13,6 +19,8 @@ import { WorkCard } from '../../components';
 import TypeWriter from 'react-native-typewriter';
 
 const SkillsScreen = ({ navigation }) => {
+  const windowWidth = Dimensions.get('window').width;
+  const windowHeight = Dimensions.get('window').height;
   const { height, width, scale } = useWindowDimensions();
 
   const [progressBarLoading, setProgressBarLoading] = useState<boolean>(true);
@@ -28,7 +36,6 @@ const SkillsScreen = ({ navigation }) => {
     <View
       style={{
         flex: 1,
-        width: width,
         flexDirection: 'row',
         backgroundColor: COLOR.mainBackground,
       }}
@@ -68,7 +75,7 @@ const SkillsScreen = ({ navigation }) => {
               >
                 {`Skills &\nExperience`}
               </TypeWriter>
-              <View style={{ width: hp(80) }}>
+              <View>
                 <Text
                   style={{
                     color: 'white',

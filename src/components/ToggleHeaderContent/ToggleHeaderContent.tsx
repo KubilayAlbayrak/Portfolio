@@ -136,7 +136,7 @@ const ToggleHeaderContent: React.FC<PropsType> = ({
         style={{
           flex: 1,
           flexDirection: 'row',
-          justifyContent: 'center',
+          justifyContent: 'space-around',
           alignItems: 'flex-end',
           marginBottom: heightPercentageToDP(5),
         }}
@@ -149,7 +149,6 @@ const ToggleHeaderContent: React.FC<PropsType> = ({
               'https://www.linkedin.com/in/kubilay-albayrak-193892149/'
             )
           }
-          style={{ marginLeft: widthPercentageToDP(6) }}
         >
           <FontAwesome5
             name='linkedin-in'
@@ -161,7 +160,6 @@ const ToggleHeaderContent: React.FC<PropsType> = ({
           onHoverIn={() => setHoveredGithub(true)}
           onHoverOut={() => setHoveredGithub(false)}
           onPress={() => Linking.openURL('https://github.com/KubilayAlbayrak')}
-          style={{ marginLeft: widthPercentageToDP(6) }}
         >
           <AntDesign
             name='github'
@@ -173,7 +171,6 @@ const ToggleHeaderContent: React.FC<PropsType> = ({
           onHoverIn={() => setHoveredTwitter(true)}
           onHoverOut={() => setHoveredTwitter(false)}
           onPress={() => Linking.openURL('https://twitter.com/kubilayalbyrk')}
-          style={{ marginLeft: widthPercentageToDP(6) }}
         >
           <AntDesign
             name='twitter'
@@ -185,7 +182,6 @@ const ToggleHeaderContent: React.FC<PropsType> = ({
           onHoverIn={() => setHoveredInstagram(true)}
           onHoverOut={() => setHoveredInstagram(false)}
           onPress={() => Linking.openURL('https://instagram.com/kubilayalbyrk')}
-          style={{ marginLeft: widthPercentageToDP(6) }}
         >
           <AntDesign
             name='instagram'

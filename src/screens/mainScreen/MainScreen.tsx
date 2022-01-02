@@ -42,29 +42,33 @@ const MainScreen = ({ navigation }) => {
             marginTop: height >= 670 ? hp(10) : hp(0),
           }}
         >
-          <View
-            style={{
-              marginTop: width >= 1045 ? hp(20) : hp(0),
-              marginLeft: wp(5),
-            }}
-          >
-            <TypeWriter style={styles.text} typing={1} fixed={true}>
-              {`Hi,\nI'm Kubilay,\nReact / React-Native Developer`}
-            </TypeWriter>
-          </View>
-          <View
-            style={{
-              marginTop: height >= 1045 || height > 670 ? hp(5) : hp(0),
-              marginLeft: wp(5),
-              justifyContent: 'center',
-            }}
-          >
-            <Button
-              title={'C o n t a c t   M e !'}
-              onPressButton={() => {
-                Linking.openURL('mailto:skubilayalbayrak@gmail.com');
+          <View style={{ backgroundColor: COLOR.mainBackground }}>
+            <View
+              style={{
+                marginTop: width >= 1045 ? hp(20) : hp(0),
+                marginLeft: wp(5),
               }}
-            />
+            >
+              <TypeWriter style={styles.text} typing={1} fixed={true}>
+                {`Hi,\nI'm Kubilay,\nReact / React-Native Developer`}
+              </TypeWriter>
+            </View>
+          </View>
+          <View style={{ backgroundColor: COLOR.mainBackground }}>
+            <View
+              style={{
+                marginTop: height >= 1045 || height > 670 ? hp(5) : hp(0),
+                marginLeft: wp(5),
+                justifyContent: 'center',
+              }}
+            >
+              <Button
+                title={'C o n t a c t   M e !'}
+                onPressButton={() => {
+                  Linking.openURL('mailto:skubilayalbayrak@gmail.com');
+                }}
+              />
+            </View>
           </View>
         </View>
       ) : (

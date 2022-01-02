@@ -33,10 +33,8 @@ export default function App() {
   const { height, width, scale } = useWindowDimensions();
 
   return (
-    <View style={{ height: height, width: width }}>
-      <NavigationContainer linking={linking} fallback={<Text>Loading...</Text>}>
-        <MainStackScreen />
-      </NavigationContainer>
-    </View>
+    <NavigationContainer linking={linking} fallback={<Text>Loading...</Text>}>
+      <MainStackScreen />
+    </NavigationContainer>
   );
 }
