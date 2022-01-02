@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, Pressable, useWindowDimensions } from 'react-native';
 import ReactCardFlip from 'react-card-flip';
 import { styles } from './styles';
 import { COLOR } from '../../../globalStyles';
@@ -11,9 +11,12 @@ import {
 const WorkCard = () => {
   const [workCardFlipped, setWorkCardFlipped] = useState<boolean>(false);
 
+  const { height, width, scale } = useWindowDimensions();
+
   return (
     <ReactCardFlip isFlipped={workCardFlipped} flipDirection='vertical'>
       <Pressable
+        onPress={() => setWorkCardFlipped(!workCardFlipped)}
         onHoverIn={() => setWorkCardFlipped(true)}
         style={{
           backgroundColor: COLOR.workCardBg,
@@ -37,6 +40,7 @@ const WorkCard = () => {
         </Text>
       </Pressable>
       <Pressable
+        onPress={() => setWorkCardFlipped(!workCardFlipped)}
         onHoverOut={() => setWorkCardFlipped(false)}
         style={{
           backgroundColor: COLOR.workCardBg,

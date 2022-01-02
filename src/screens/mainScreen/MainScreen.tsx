@@ -45,11 +45,19 @@ const MainScreen = ({ navigation }) => {
           <View style={{ backgroundColor: COLOR.mainBackground }}>
             <View
               style={{
-                marginTop: width >= 1045 ? hp(20) : hp(0),
+                marginTop: width >= 1045 ? hp(20) : hp(10),
                 marginLeft: wp(5),
               }}
             >
-              <TypeWriter style={styles.text} typing={1} fixed={true}>
+              <TypeWriter
+                style={{
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: width > 480 ? 70 : 55,
+                }}
+                typing={1}
+                fixed={true}
+              >
                 {`Hi,\nI'm Kubilay,\nReact / React-Native Developer`}
               </TypeWriter>
             </View>
