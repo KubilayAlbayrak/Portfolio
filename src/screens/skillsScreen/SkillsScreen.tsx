@@ -14,7 +14,7 @@ import TypeWriter from 'react-native-typewriter';
 
 const SkillsScreen = ({ navigation }) => {
   const { height, width, scale } = useWindowDimensions();
-  console.log('WIDTH', width);
+
   const [progressBarLoading, setProgressBarLoading] = useState<boolean>(true);
   const [toggleHeaderContent, setToggleHeaderContent] = useState<boolean>(true);
 
@@ -28,6 +28,7 @@ const SkillsScreen = ({ navigation }) => {
     <View
       style={{
         flex: 1,
+        width: width,
         flexDirection: 'row',
         backgroundColor: COLOR.mainBackground,
       }}

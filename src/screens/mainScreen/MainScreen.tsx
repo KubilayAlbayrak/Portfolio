@@ -13,7 +13,6 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import TypeWriter from 'react-native-typewriter';
-
 const MainScreen = ({ navigation }) => {
   const { height, width, scale } = useWindowDimensions();
   const [toggleHeaderContent, setToggleHeaderContent] = useState<boolean>(true);

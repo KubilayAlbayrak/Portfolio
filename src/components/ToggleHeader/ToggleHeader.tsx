@@ -1,4 +1,4 @@
-import React, { Props, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   StyleSheet,
   Text,
@@ -18,6 +18,7 @@ import { COLOR } from '../../../globalStyles';
 export type PropsType = {
   setToggleHeaderContent: React.Dispatch<React.SetStateAction<boolean>>;
   toggleHeaderContent: boolean;
+  isFocused: boolean;
 };
 
 const ToggleHeader: React.FC<PropsType> = ({

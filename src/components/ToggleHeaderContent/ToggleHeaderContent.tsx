@@ -65,7 +65,7 @@ const ToggleHeaderContent: React.FC<PropsType> = ({
           onHoverIn={() => setHoveredHome(true)}
           onHoverOut={() => setHoveredHome(false)}
           onPress={() => {
-            navigation.navigate('Home');
+            navigation.push('Home');
             setToggleHeaderContent(true);
           }}
         >
@@ -82,7 +82,7 @@ const ToggleHeaderContent: React.FC<PropsType> = ({
           onHoverIn={() => setHoveredAbout(true)}
           onHoverOut={() => setHoveredAbout(false)}
           onPress={() => {
-            navigation.navigate('About');
+            navigation.push('About');
             setToggleHeaderContent(true);
           }}
         >
@@ -99,7 +99,7 @@ const ToggleHeaderContent: React.FC<PropsType> = ({
           onHoverIn={() => setHoveredMySkills(true)}
           onHoverOut={() => setHoveredMySkills(false)}
           onPress={() => {
-            navigation.navigate('Skills');
+            navigation.push('Skills');
             setToggleHeaderContent(true);
           }}
         >
@@ -118,7 +118,7 @@ const ToggleHeaderContent: React.FC<PropsType> = ({
           onHoverIn={() => setHoveredBlog(true)}
           onHoverOut={() => setHoveredBlog(false)}
           onPress={() => {
-            navigation.navigate('Blog');
+            navigation.push('Blog');
             setToggleHeaderContent(true);
           }}
         >
