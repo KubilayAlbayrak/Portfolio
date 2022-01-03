@@ -42,7 +42,7 @@ const SideBar = ({ navigation }) => {
       >
         <Image
           source={require('../../assets/kLogo.png')}
-          style={{ width: width * 0.1, height: height * 0.1 }}
+          style={{ width: width * 0.095, height: height * 0.1 }}
         ></Image>
       </Pressable>
       <View style={styles.headerBarTextView}>
